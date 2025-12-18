@@ -1,0 +1,6 @@
+package idris2-sample
+
+sourcedir  = "src"
+modules    = Main
+main       = Main
+executable = "idris2-sample"
