@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "description": "Write documentation",
+      "status": "Todo"
+    },
+    {
+      "id": 2,
+      "description": "Implement domain logic",
+      "status": "InProgress"
+    },
+    {
+      "id": 3,
+      "description": "Add coverage tooling",
+      "status": "Todo"
+    }
+  ]
+}

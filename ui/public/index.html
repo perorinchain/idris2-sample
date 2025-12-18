@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Idris2 Task Board Playground</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        max-width: 960px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        line-height: 1.5;
+      }
+      h1 {
+        margin-bottom: 0.5rem;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+      }
+      th {
+        background: #f2f2f2;
+      }
+      button {
+        padding: 0.5rem 1rem;
+        margin-right: 0.5rem;
+      }
+      #output {
+        white-space: pre-wrap;
+        background: #111;
+        color: #f8f8f2;
+        padding: 1rem;
+        border-radius: 6px;
+        min-height: 140px;
+      }
+      #coverage {
+        margin-top: 1rem;
+      }
+      .status-select {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Idris2 Task Board Playground</h1>
+    <p>
+      このUIからタスクの内容やステータスを編集し、「Apply changes」を押すと
+      <code>board-config.json</code> が書き換わり、Idris2 ソースが自動生成されます。
+      そのままビルドと <code>idris2-cov</code> の実行まで行うので、分岐や関数数の変化を手軽に観察できます。
+    </p>
+
+    <div>
+      <button id="add-task">＋ Add Task</button>
+      <button id="apply-btn">Apply changes</button>
+      <span id="status"></span>
+    </div>
+
+    <table id="task-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>CLI Output</h2>
+    <div id="output">まだ実行していません。</div>
+
+    <h2>Coverage Summary</h2>
+    <div id="coverage"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
