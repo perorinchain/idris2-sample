@@ -1,1 +1,0 @@
-(parameterize ([optimize-level 3] [compile-file-message #f]) (compile-program "/home/perorin/.codex/idris2-sample/build/exec/idris2-sample_app/idris2-sample.ss"))
